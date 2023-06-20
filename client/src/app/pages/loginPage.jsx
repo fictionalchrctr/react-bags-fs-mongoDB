@@ -88,7 +88,7 @@ const LoginPage = () => {
     </div>
   ) : (
     <div>
-      <Navigate to={fromPage} />
+      <Navigate to={fromPage} state={{ from: location }} />
     </div>
   )
 }

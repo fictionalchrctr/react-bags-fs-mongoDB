@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { addProductInCart } from '../store/cartSlice'
 import { getIsLoggedIn } from '../store/authSlice'
 // import Product from './product'
@@ -12,8 +12,8 @@ import { getIsLoggedIn } from '../store/authSlice'
 const ProductsList = ({ products }) => {
   const dispatch = useDispatch()
   const isLoggedIn = useSelector(getIsLoggedIn())
-  console.log('isLoggedIn', isLoggedIn)
   const navigate = useNavigate()
+
   const handleAdd = (product) => {
     if (!isLoggedIn) {
       return navigate('login')
@@ -21,10 +21,13 @@ const ProductsList = ({ products }) => {
     return dispatch(addProductInCart(product))
   }
 
+  // const createNewGood = () => {
+  //   navigate('/admin/good/new')
+  // }
+
   return (
     <div className=' products flex flex-wrap '>
       {products.map((p) => (
-        // <Link to={`/product/${p._id}`}>
         <div
           key={p._id}
           className='product card border-solid border-[1px] border-[#f3f3f3] rounded-[40px] w-[236px] p-7 mx-4 mb-8 hover:transition hover:shadow-lg hover:-translate-y-2 duration-200 cursor-pointer'
@@ -56,4 +59,3 @@ const ProductsList = ({ products }) => {
 }
 
 export default ProductsList
-// <div className='content-top flex items-center justify-between  '>
