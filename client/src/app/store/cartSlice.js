@@ -1,13 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { calcTotalPrice } from '../utils/calcTotalPrice'
+import { getCartFromLocalStorage } from '../utils/getCartFromLocalStorage'
+
+const initialState = getCartFromLocalStorage()
 
 const cartSlice = createSlice({
   name: 'cart',
-  initialState: {
-    entities: [],
-    totalPrice: 0,
-    user: null,
-  },
+  initialState,
   reducers: {
     addedProduct: (state, action) => {
       const findItem = state.entities.find(
@@ -58,7 +57,9 @@ export const makeCartEmpty = () => (dispatch) => {
   dispatch(clearCart())
 }
 
-export const getCart = () => (state) => state.cart.entities
+export const getCart = () => (state) => state.cart
+
+export const getCartEntities = () => (state) => state.cart.entities
 
 export const getCartPrice = () => (state) => state.cart.totalPrice
 

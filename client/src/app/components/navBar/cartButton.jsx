@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import { getCartPrice } from '../../store/cartSlice'
+import { getCart } from '../../store/cartSlice'
+import { setCurrentCart } from '../../service/localStorage.service'
 
 const CartButton = ({ link }) => {
-  const totalPrice = useSelector(getCartPrice())
+  const { entities, totalPrice } = useSelector(getCart())
+
+  const isMounted = useRef(false)
+
+  useEffect(() => {
+    // если это первый рендер, то не делаем
+    if (isMounted.current) {
+      const jsonEntities = JSON.stringify(entities)
+      setCurrentCart(jsonEntities)
+    }
+    isMounted.current = true
+  }, [entities])
 
   return (
     <NavLink to={link}>
