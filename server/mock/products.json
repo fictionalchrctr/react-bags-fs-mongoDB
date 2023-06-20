@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "10000001",
+    "name": "Рюкзак STOCKHOLM",
+    "img": "../imgs/stockholm-backpack.png",
+    "price": 5700,
+    "category": "101",
+    "description": ""
+  },
+  {
+    "_id": "10000002",
+    "name": "Рюкзак LOKKA",
+    "img": "../imgs/lokka-backpack.png",
+    "price": 4900,
+    "category": "101",
+    "description": ""
+  },
+  {
+    "_id": "10000003",
+    "name": "Рюкзак THE OCEAN RACE",
+    "img": "../imgs/THE-OCEAN-RACE-BACKPACK.png",
+    "price": 6500,
+    "category": "101",
+    "description": ""
+  },
+  {
+    "_id": "10000004",
+    "name": "Рюкзак GENERATOR",
+    "img": "../imgs/GENERATOR-BACKPACK.png",
+    "price": 8100,
+    "category": "102",
+    "description": ""
+  },
+  {
+    "_id": "10000005",
+    "name": "Рюкзак RESISTOR",
+    "img": "../imgs/Resistor-Backpack.png",
+    "price": 16200,
+    "category": "102",
+    "description": ""
+  },
+  {
+    "_id": "10000006",
+    "name": "Сумка DUFFEL 90L",
+    "img": "../imgs/DUFFEL-BAG.png",
+    "price": 9800,
+    "category": "103",
+    "description": ""
+  },
+  {
+    "_id": "10000007",
+    "name": "Рюкзак TRANSISTOR",
+    "img": "../imgs/Transistor-Backpack.png",
+    "price": 12200,
+    "category": "102",
+    "description": ""
+  },
+  {
+    "_id": "10000008",
+    "name": "Водонепроницаемая сумка DUFFEL 50L",
+    "img": "../imgs/WATERPROOF-DUFFEL-BAG.png",
+    "price": 10600,
+    "category": "103",
+    "description": ""
+  },
+  {
+    "_id": "10000009",
+    "name": "Сумка для тренировок BISLETT",
+    "img": "../imgs/BISLETT-TRAINING-BAG.png",
+    "price": 5700,
+    "category": "103",
+    "description": ""
+  }
+]

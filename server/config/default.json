@@ -1,0 +1,6 @@
+{
+  "port": 8081,
+  "mongoUri": "mongodb+srv://rus51ddl:qsc51mongoDB@cluster0.bm19mpb.mongodb.net/app?retryWrites=true&w=majority",
+  "accessSecret": "accessSecretToken",
+  "refreshSecret": "refreshSecretToken"
+}
